@@ -384,6 +384,8 @@ GameObject:
   m_Component:
   - component: {fileID: 558403593}
   - component: {fileID: 558403592}
+  - component: {fileID: 558403594}
+  - component: {fileID: 558403595}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -398,7 +400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558403591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9504296d2e0d0d74296c04db055fab01, type: 3}
   m_Name: 
@@ -421,6 +423,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &558403594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558403591}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c5fd326ef794a48a1c395918473231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &558403595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558403591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40592a52ba0afaa479e6090e0661b2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chicken: {fileID: 1349677735}
 --- !u!1 &658916878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca76bda8a3951141a296b58a16cc788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ground: 8.93
+  Ground: -0.1
   ground: {fileID: 1484474373}
 --- !u!1 &1616857927
 GameObject:

@@ -8,6 +8,13 @@ public class floor : MonoBehaviour
     public Transform ground;
     private void Update()
     {
-        ground.Translate(-0.05f,0,0);
+        ground.Translate(-0.01f,0,0);
+    }
+    /// <summary>
+    /// 地板移動
+    /// </summary>
+    private void Move()
+    {
+        
     }
 }
