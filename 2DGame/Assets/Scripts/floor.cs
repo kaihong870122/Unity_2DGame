@@ -2,8 +2,8 @@
 
 public class floor : MonoBehaviour
 {
-    [Header("速度"), Range(0.01f, 10f)]
-    public float Ground = 1f;
+    //[Header("速度"), Range(0.01f, 10f)]
+    public static float Ground = 3f;
 
     public Transform ground;
     /// <summary>

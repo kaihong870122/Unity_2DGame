@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 //可繼承 類別 所有的動作
-public class Pipe :floor
+public class Pipe : floor
 {
-    private void Start()
+    //在所有攝影機看不到時執行一次
+    private void OnBecameInvisible()
     {
-        //刪除(此遊戲物件，延遲4秒)
-        Destroy(gameObject,4f);
+        Destroy(gameObject, 4f);
     }
-
+    //在所有攝影機看到時執行一次
+    private void OnBecameVisible()
+    {
+        
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,13 +9,17 @@ public class GameManager : MonoBehaviour
     public int bestSorce;
     [Header("水管群組")]
     public GameObject pipe;  //GameObject 可存場景上的物件或是預制物
+    [Header("結束畫面")]
+    public GameObject goFinal;
+    public Text textSorce;
     /// <summary>
     /// 設定目前分數
     /// </summary>
     /// <param name="sorce">每次加分為1</param>
-    private void Thesorce(int sorce = 1)
+    public void Thesorce(int add = 1)
     {
-
+        sorce = sorce + add;
+        textSorce.text = sorce.ToString();
     }
     /// <summary>
     /// 設定最高分數
@@ -23,10 +28,15 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    public void GameOver()
+    {
+        goFinal.SetActive(true);
+        CancelInvoke("SpwanPipe");
+    }
     /// <summary>
     /// 設置生成水管
     /// </summary>
-    private void SpwanPipe()
+    public void SpwanPipe()
     {
         //Vector3 p = new Vector3 (4, y, 0);三圍向量 制定水管三圍位置
         float y = Random.Range(-1.5f, 1.3f);
@@ -36,7 +46,7 @@ public class GameManager : MonoBehaviour
         //Quaternion.identity 零角度
     }
 
-    private void Start()
+    public void Start()
     {
         //設置水管
         //SpwanPipe();
@@ -49,3 +59,4 @@ public class GameManager : MonoBehaviour
         
     }
 }
+
