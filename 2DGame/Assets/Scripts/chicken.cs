@@ -3,9 +3,9 @@
 public class chicken : MonoBehaviour
 {
     [Header("跳高"), Range(100, 1000)]
-    public int jumpHight = 250;
-    [Header("旋轉"), Range(10,100)]
-    public float angle = 50f;
+    public int jumpHight = 300;
+    [Header("旋轉"), Range(1,100)]
+    public float angle = 1f;
     [Header("死亡"), Tooltip("你已死了")]
     public bool isdead;
     public GameObject goScore, goGM;
@@ -16,7 +16,11 @@ public class chicken : MonoBehaviour
     public AudioSource aud;
     public AudioClip soundJump, soundHit, soundPass;
 
-  
+    private void Start()
+    {
+        //設定螢幕解析度(寬,高,是否全螢幕)
+        Screen.SetResolution(360, 540, false);
+    }
     /// <summary>
     /// 小雞跳躍
     /// </summary>
@@ -58,7 +62,7 @@ public class chicken : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "通過")
+        if (collision.gameObject.name == "通過" && !isdead)
         {
             print("加分~~");
             aud.PlayOneShot(soundPass);
@@ -71,6 +75,7 @@ public class chicken : MonoBehaviour
     /// </summary>
     private void Dead()
     {
+        if (isdead) return;
         isdead = true;
         gm.GameOver();
         floor.Ground = 0;

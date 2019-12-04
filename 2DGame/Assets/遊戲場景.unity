@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 108733800}
   - component: {fileID: 108733799}
   m_Layer: 5
-  m_Name: 99999
+  m_Name: bestsorce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &108733800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -226,11 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a9737a3e9b4184b9237385a64f3675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sorce: 0
-  bestSorce: 0
+  score: 0
+  bestScore: 0
   pipe: {fileID: 5010810954735565331, guid: e5c9aea58377cde4485995ba3645643e, type: 3}
   goFinal: {fileID: 1164607874}
-  textSorce: {fileID: 1616857929}
+  textScore: {fileID: 1616857929}
+  textHeight: {fileID: 108733799}
 --- !u!4 &128733496
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +672,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 809150228}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 128733495}
+        m_MethodName: reaple
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &809150228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,7 +1051,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1341035290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 128733495}
+        m_MethodName: exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1341035290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,17 +1215,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0533d104e824c514a94e8e68320572ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHight: 100
+  jumpHight: 200
   angle: 10
   isdead: 0
   goScore: {fileID: 1616857927}
   goGM: {fileID: 128733494}
   r2d: {fileID: 1349677737}
   gm: {fileID: 128733495}
-  aud: {fileID: 982632650}
+  aud: {fileID: 1349677738}
   soundJump: {fileID: 8300000, guid: 7bed3b548b8468c449fe3856c723cebe, type: 3}
-  soundHit: {fileID: 8300000, guid: c3e45dee75d652046bb9fd16aa3492bd, type: 3}
-  soundPass: {fileID: 8300000, guid: b5999615b5f276846aff5e55ad3a77cf, type: 3}
+  soundHit: {fileID: 8300000, guid: b5999615b5f276846aff5e55ad3a77cf, type: 3}
+  soundPass: {fileID: 8300000, guid: c3e45dee75d652046bb9fd16aa3492bd, type: 3}
 --- !u!58 &1349677736
 CircleCollider2D:
   m_ObjectHideFlags: 0
